@@ -1,0 +1,7 @@
+<p>{{ game }}</p>
+<ng-container *ngIf="!lastVoted; else elseblock">
+  <button (click)="voted.emit(game)">Vote</button>
+</ng-container>
+<ng-template #elseblock>
+  <p>Voted on already</p>
+</ng-template>
